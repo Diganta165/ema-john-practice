@@ -1,8 +1,11 @@
 import React from 'react';
 import './Login.css'
 import { Link } from 'react-router-dom';
+import useFirebase from '../../Hooks/useFirebase';
 
 const Login = () => {
+
+    const {user, signInUsingGoogle} = useFirebase;
     return (
         <div className='login-form'>
             <div>
@@ -16,7 +19,10 @@ const Login = () => {
                 </form>
                 <p>New to ema-john <Link to="/register">Create New Account</Link></p>
                 <div>------------or------------</div>
-                <button className='btn-regular'>Google Signin</button>
+                <button className='btn-regular'
+                onClick={signInUsingGoogle}
+                >Google Signin
+                </button>
             </div>
         </div>
     );
