@@ -51,7 +51,7 @@ const Shop = () => {
         if(exists){
             const rest = cart.filter(pd => pd.key !== product.key);
             exists.quantity = exists.quantity + 1;
-            newCart = [...rest, product];
+            newCart = [...rest, exists];
         }
         else{
             product.quantity = 1;
