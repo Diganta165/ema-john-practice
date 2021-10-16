@@ -11,7 +11,7 @@ const Shop = () => {
     const [displayProducts,setDisplayProducts] = useState([]);
     useEffect(()=>{
         console.log('product API called')
-        fetch(`./products.JSON`)
+        fetch(`./products.json`)
         .then(res => res.json())
         // .then(data => console.log(data));
         .then(data => {
